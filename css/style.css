@@ -449,3 +449,126 @@ button:focus-visible {
     }
 
 }
+
+
+/* ========================================
+   ACTOR PAGE
+======================================== */
+
+.actor-hero {
+    background:
+        radial-gradient(
+            ellipse at 80% 40%,
+            #343039 0%,
+            #181619 40%,
+            #090909 75%
+        );
+}
+
+
+/* ========================================
+   THE FRIED CHICKEN INCIDENT
+   If you know, you know. 🍗
+======================================== */
+
+.actor-hero .chicken-easter-egg {
+    position: absolute;
+    bottom: 35px;
+    left: 6%;
+    z-index: 3;
+
+    font-size: 18px;
+    opacity: 0.22;
+    transform: rotate(-20deg);
+
+    cursor: default;
+    user-select: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.actor-hero .chicken-easter-egg:hover {
+    opacity: 1;
+    transform: rotate(0deg) scale(1.4);
+}
+
+/* ========================================
+   CAMERA PAGE
+======================================== */
+
+.camera-hero {
+    background:
+        radial-gradient(
+            ellipse at 80% 40%,
+            #28363b 0%,
+            #151b1e 40%,
+            #090909 75%
+        );
+}
+
+/* EQUIPMENT SECTION */
+
+.equipment-section {
+    background: var(--black);
+    border-bottom: 1px solid var(--border);
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.equipment-card {
+    position: relative;
+    padding: 40px 30px;
+    background: var(--charcoal);
+    border: 1px solid var(--border);
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.equipment-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.equipment-number {
+    display: block;
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.equipment-card h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.equipment-card p {
+    color: var(--gray);
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .equipment-card:hover {
+        transform: none;
+    }
+
+}
