@@ -572,3 +572,32 @@ button:focus-visible {
     }
 
 }
+
+/* ========================================
+   PROFESSIONAL BIOGRAPHIES
+======================================== */
+
+.about-content {
+    max-width: 750px;
+}
+
+.about-content p {
+    margin-bottom: 24px;
+    line-height: 1.9;
+}
+
+.about-content em {
+    color: var(--white);
+    font-style: italic;
+}
+
+.about-content .button {
+    margin-top: 15px;
+}
+
+@media (max-width: 1100px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
