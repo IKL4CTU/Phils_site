@@ -888,3 +888,41 @@ button:focus-visible {
         height: 260px;
     }
 }
+
+/* CAMERA SMALL HERO LOGO */
+
+.camera-hero .camera-small-logo {
+    display: block;
+    width: 55px;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 3px rgba(220, 220, 220, 0.25));
+}
+
+@media (max-width: 768px) {
+    .camera-hero .camera-small-logo {
+        width: 42px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+}
+
+/* DIRECTOR SMALL HERO LOGO */
+
+.director-hero .director-small-logo {
+    display: block;
+    width: 55px;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 3px rgba(220, 220, 220, 0.25));
+}
+
+@media (max-width: 768px) {
+    .director-hero .director-small-logo {
+        width: 42px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+}
