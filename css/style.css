@@ -624,43 +624,35 @@ button:focus-visible {
 }
 
 
-/* ========================================
-   CAMERA HERO LOGO
-======================================== */
 
-.camera-hero .camera-logo {
+/* CAMERA LOGO ABOVE "ON" IN JOHNSON */
+
+.camera-hero .camera-name-ending {
+    position: relative;
+    display: inline-block;
+}
+
+.camera-hero .camera-name-ending .camera-logo {
     position: absolute;
-    top: 50%;
-    right: 7%;
-    transform: translateY(-50%);
-
-    width: clamp(180px, 26vw, 420px);
-    max-height: 75%;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.85em;
     height: auto;
+    max-height: none;
     object-fit: contain;
-
-    z-index: 1;
-    opacity: 0.85;
-    pointer-events: none;
-}
-
-.camera-hero .hero-content {
-    z-index: 2;
-}
-
-.camera-hero .hero-index {
+    opacity: 1;
     z-index: 3;
+    pointer-events: none;
+    filter: drop-shadow(0 0 3px rgba(220, 220, 220, 0.35));
 }
 
 @media (max-width: 768px) {
-
-    .camera-hero .camera-logo {
-        right: -8%;
-        width: 70%;
-        opacity: 0.22;
+    .camera-hero .camera-name-ending .camera-logo {
+        width: 0.7em;
     }
-
 }
+
 
 /* ACTOR HERO PORTRAIT */
 
@@ -825,5 +817,74 @@ button:focus-visible {
         width: 72%;
         height: 65%;
         opacity: 0.25;
+    }
+}
+
+/* CAMERA ABOUT PHOTO GALLERY */
+
+.camera-about-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.camera-about-gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    border: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+    .camera-about-gallery {
+        gap: 10px;
+        margin-top: 25px;
+    }
+}
+
+
+/* CAMERA EQUIPMENT PHOTOGRAPHS */
+
+.equipment-photos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.equipment-photos figure {
+    margin: 0;
+    border: 1px solid var(--border);
+    background: #151515;
+    overflow: hidden;
+}
+
+.equipment-photos img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    background: #fff;
+}
+
+.equipment-photos figcaption {
+    padding: 18px;
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .equipment-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .equipment-photos img {
+        height: 260px;
     }
 }
