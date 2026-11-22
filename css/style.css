@@ -601,3 +601,73 @@ button:focus-visible {
         gap: 35px;
     }
 }
+
+/* DIRECTOR LOGO */
+
+.director-hero .director-logo {
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    transform: translateY(-50%);
+    width: clamp(220px, 30vw, 500px);
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+.director-hero .hero-content {
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .director-hero .director-logo {
+        right: -12%;
+        width: 75%;
+        opacity: 0.25;
+    }
+}
+/* Keep hero index above the director logo */
+
+.director-hero .hero-index {
+    z-index: 3;
+}
+
+/* ========================================
+   CAMERA HERO LOGO
+======================================== */
+
+.camera-hero .camera-logo {
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    transform: translateY(-50%);
+
+    width: clamp(180px, 26vw, 420px);
+    max-height: 75%;
+    height: auto;
+    object-fit: contain;
+
+    z-index: 1;
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+.camera-hero .hero-content {
+    z-index: 2;
+}
+
+.camera-hero .hero-index {
+    z-index: 3;
+}
+
+@media (max-width: 768px) {
+
+    .camera-hero .camera-logo {
+        right: -8%;
+        width: 70%;
+        opacity: 0.22;
+    }
+
+}
