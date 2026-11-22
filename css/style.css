@@ -726,41 +726,48 @@ button:focus-visible {
     }
 }
 
-/* ACTOR ABOUT SECTION: GALLERY LEFT, BIO RIGHT */
 
-.actor-hero + .about-section .about-grid {
+/* ACTOR ABOUT SECTION: RESPONSIVE ALIGNMENT */
+
+.actor-about-grid {
+    display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 80px;
+    row-gap: 0;
     align-items: start;
 }
 
-.actor-hero + .about-section .about-grid > div:first-child {
+.actor-about-grid > div:first-child {
     grid-column: 1;
     grid-row: 1;
     min-width: 0;
 }
 
-.actor-hero + .about-section .about-grid > .about-content {
+.actor-about-grid > .actor-gallery {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 0;
+    min-width: 0;
+}
+
+.actor-about-grid > .about-content {
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
+    padding-top: 0;
     min-width: 0;
 }
 
 @media (max-width: 1100px) {
-    .actor-hero + .about-section .about-grid {
+    .actor-about-grid {
         grid-template-columns: 1fr;
+        row-gap: 25px;
     }
 
-    .actor-hero + .about-section .about-grid > div:first-child,
-    .actor-hero + .about-section .about-grid > .about-content {
+    .actor-about-grid > div:first-child,
+    .actor-about-grid > .actor-gallery,
+    .actor-about-grid > .about-content {
         grid-column: 1;
         grid-row: auto;
-    }
-}
-
-/* ACTOR BIOGRAPHY VERTICAL ALIGNMENT */
-
-@media (min-width: 1101px) {
-    .actor-hero + .about-section .about-content {
-        padding-top: 245px;
     }
 }
