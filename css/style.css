@@ -926,3 +926,111 @@ button:focus-visible {
         margin-bottom: 10px;
     }
 }
+
+/* FINAL BIOGRAPHY ALIGNMENT - DIRECTOR & CAMERA */
+
+@media (min-width: 1101px) {
+
+    .director-hero + .about-section .about-content,
+    .camera-hero + .about-section .about-content {
+        padding-top: 0;
+        align-self: start;
+    }
+
+}
+
+/* DIRECTOR ABOUT - ALIGN BIO WITH PORTRAIT */
+
+@media (min-width: 1101px) {
+    .director-about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: auto 1fr;
+        column-gap: 80px;
+        row-gap: 35px;
+        align-items: start;
+    }
+
+    .director-about-grid > div:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .director-about-grid > .director-about-photo {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 0;
+    }
+
+    .director-about-grid > .about-content {
+        grid-column: 2;
+        grid-row: 2;
+        padding-top: 0;
+        align-self: start;
+    }
+
+    .director-about-grid > .about-content > p:first-child {
+        margin-top: 0;
+    }
+}
+
+/* DIRECTOR ABOUT - TABLET AND MOBILE */
+
+@media (max-width: 1100px) {
+    .director-about-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .director-about-grid > .director-about-photo {
+        margin-top: 0;
+    }
+}
+
+/* CAMERA ABOUT - ALIGN BIOGRAPHY WITH PHOTOGRAPHS */
+
+@media (min-width: 1101px) {
+    .camera-about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: auto 1fr;
+        column-gap: 80px;
+        row-gap: 35px;
+        align-items: start;
+    }
+
+    .camera-about-grid > div:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .camera-about-grid > .camera-about-gallery {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 0;
+    }
+
+    .camera-about-grid > .about-content {
+        grid-column: 2;
+        grid-row: 2;
+        padding-top: 0;
+        align-self: start;
+    }
+
+    .camera-about-grid > .about-content > p:first-child {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .camera-about-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .camera-about-grid > .camera-about-gallery {
+        margin-top: 0;
+    }
+}
